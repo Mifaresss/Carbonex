@@ -1,0 +1,129 @@
+/* --------------Common Styles-------------- */
+[class*="__container"] {
+	max-width: 1430px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 16px;
+}
+
+
+
+
+
+/* --------------Header-------------- */
+.header {
+}
+.header__container {
+	padding-top: 24px;
+	padding-bottom: 24px;
+	display: flex;
+	align-items: center;
+}
+.header__logo {
+	flex-basis: 259px;
+}
+.logo {
+	display: flex;
+	align-items: center;
+	font-family: 'Play', sans-serif;
+	font-size: 18px;
+	line-height: 2.3;
+	letter-spacing: .05em;
+	color: #000;
+}
+.logo img {
+	margin-right: 12px;
+}
+.header__nav {
+	flex-basis: 706px;
+}
+.nav {
+}
+.nav__list {
+	display: flex;
+	gap: 24px;
+}
+.nav__item {
+}
+.nav__item a {
+	line-height: 1.37;
+	color: #000;
+}
+.header__menu {
+	display: none;
+}
+.header__contacts {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 178px;
+	margin-right: 50px;
+}
+.header__contacts p {
+	margin-left: 12px;
+	line-height: 1.37;
+}
+.header__contacts a {
+	color: #808080;
+	line-height: 1.37;
+}
+.header__contacts a::after {
+	content: '';
+	border-top: 1px dashed #808080;
+	display: block;
+}
+.header__button {
+	min-width: 207px;
+	height: 48px;
+	font-family: 'Play', sans-serif;
+	font-size: 16px;
+	line-height: 1.18;
+	letter-spacing: .05em;
+	border: 1px solid #000;
+	border-radius: 6px;
+	background-color: transparent;
+	text-transform: uppercase;
+}
+@media (max-width: 768px) {
+	[class*="__container"] {
+		max-width: 768px;
+	}
+	.logo {
+		flex-basis: 172px;
+	}
+	.header__container {
+		justify-content: space-between;
+	}
+	.header__nav {
+		display: none;
+	}
+	.header__menu {
+		flex: 0 1 21px;
+		height: 16px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.header__menu::before,
+	.header__menu::after {
+		content: '';
+		height: 1px;
+		background-color: #000;
+	}
+	.header__menu span {
+		height: 1px;
+		background-color: #000;
+	}
+	.header__contacts {
+		flex-basis: 178px;
+		margin-right: 0;
+	}
+	.header__button {
+		flex: 0 1 207px;
+	}
+}
