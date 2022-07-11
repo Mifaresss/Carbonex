@@ -127,3 +127,8 @@ body {
 		flex: 0 1 207px;
 	}
 }
+@media (max-width: 600px) {
+	.header__button {
+		display: none;
+	}
+}
