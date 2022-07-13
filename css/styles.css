@@ -42,6 +42,7 @@ body {
 }
 .header__nav {
 	flex-basis: 706px;
+	padding: 0 20px 0 10px;
 }
 .nav {
 }
@@ -90,9 +91,6 @@ body {
 	text-transform: uppercase;
 }
 @media (max-width: 768px) {
-	[class*="__container"] {
-		max-width: 768px;
-	}
 	.logo {
 		flex-basis: 172px;
 	}
@@ -130,5 +128,14 @@ body {
 @media (max-width: 600px) {
 	.header__button {
 		display: none;
+	}
+}
+@media (max-width: 479.98px) {
+	.header__contacts {
+		display: none;
+	}
+	.header__container {
+	padding-top: 24px;
+	padding-bottom: 24px;
 	}
 }
