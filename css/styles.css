@@ -28,8 +28,6 @@ body {
 
 
 
-
-
 /* --------------Header-------------- */
 .header {
 }
@@ -312,7 +310,12 @@ body {
 .subtitle-section__description {
 	color: #fff;
 }
-.subtitle-section__btn {
+.products-section__btn {
+	position: absolute;
+	bottom: 0;
+}
+.subtitle-section-btn {
+	width: 100%;
 	font-family: 'Play', sans-serif;
 	display: flex;
 	justify-content: center;
@@ -323,25 +326,22 @@ body {
 	background-color: #007FA7;
 	padding: 15px 0 15px 0;
 	color: #fff;
-	width: 100%;
-	position: absolute;
-	bottom: 0;
 	border-bottom-left-radius: 6px;
 	border-bottom-right-radius: 6px;
 	transition: all 0.7s;
 }
-.subtitle-section__btn:hover {
+.subtitle-section-btn:hover {
 	background-color: rgb(2, 92, 138);
 	opacity: 0.7;
 }
-.subtitle-section__btn span {
+.subtitle-section-btn span {
 	background-color: #006F92;
 	width: 57px;
-	height: 48px;
+	height: 100%;
 	position: absolute;
 	right: 0;
 	border-bottom-right-radius: 6px;
-	display: flex;
+	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 }
@@ -352,6 +352,7 @@ body {
 
 /* --------------Benefits Section-------------- */
 .benefits-section {
+	margin-bottom: 80px;
 }
 .benefits-section__title {
 	text-align: center;
@@ -380,12 +381,109 @@ body {
 	gap: 12px;
 	margin-bottom: 12px;
 }
-.benefits-section__subtitle {
+
+
+
+
+/* --------------Info Section-------------- */
+.info {
+	margin-bottom: 80px;
 }
-.subtitle-section {
+.info__container {
+}
+.info__title {
+	margin-bottom: 36px;
+	text-align: center;
+}
+.info__content {
+	display: flex;
+	gap: 32px;
+	height: 421px;
+}
+.info__content-wrapper {
+	max-width: 565px;
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+	align-self: center;
+}
+.info__text {
+}
+.cont-bc {
+	align-self: flex-end;
+	position: relative;
+}
+.cont-bc::before {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-color: #007FA7;
+	opacity: 0.2;
+	right: -29px;
+	top: -30px;
+	border-radius: 6px;
+}
+.info__img {
+	width: 803px;
+	height: 391px;
+	border-radius: 6px;
+	align-self: flex-end;
+	position: relative;
+	z-index: 1;
+}
+
+
+
+
+
+/* --------------News Section-------------- */
+.news {
+	margin-bottom: 80px;
+}
+.news__title {
+	text-align: center;
+	margin-bottom: 36px;
+}
+.section-title {
+}
+.news__list {
+	display: flex;
+	gap: 32px;
+}
+.news__item {
+	max-width: 445px;
+	display: flex;
+	flex-direction: column;
+}
+.news__img {
+	width: 100%;
+	height: 260px;
+	border-radius: 6px;
+	margin-bottom: 24px;
+	object-fit: cover;
+}
+.news__subtitle {
+	margin-bottom: 10px;
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+.subtitle-section_black {
+	color: #323232;
 }
 .subtitle-section__description {
 }
+.subtitle-section__description_black {
+	color: #323232;
+	margin-bottom: 24px;
+}
+.subtitle-section-btn_circle {
+	border-radius: 6px;
+	position: relative;
+}
+.subtitle-section-btn_circle span {
+	border-top-right-radius: 6px;
+}
 
 
 
@@ -393,10 +491,155 @@ body {
 
 
 
+/* --------------Contacts Section-------------- */
+.contacts {
+	background-color: #F6F6F6;
+	padding-bottom: 80px;
+}
+.contacts__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 36px;
+	width: 100%;
+}
+.contacts__title {
+	text-align: center;
+	margin-bottom: 36px;
+	padding-top: 80px;
+}
+.contacts__content {
+	max-width: 445px;
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+.contacts__table {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+.contacts__table > tbody {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+.table__title {
+	font-family: 'Play', sans-serif;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 1.13;
+	color: #323232;
+	opacity: 0.5;
+	text-transform: uppercase;
+	text-align: left;
+}
+.td-1 {
+	color: #323232;
+	opacity: 0.54;
+	width: 98px;
+}
+.contacts__maps-container {
+	width: 684px;
+	margin-top: 30px;
+	margin-right: 29px;
+}
+.contacts__maps {
+	position: relative;
+	z-index: 1;
+	border-radius: 6px;
+}
 
 
 
 
+
+
+/* --------------Footer-------------- */
+.footer {
+	background-color: #323232;
+}
+.footer__container {
+	padding-top: 25px;
+	padding-bottom: 26px;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+/* .footer__top {
+	padding-top: 25px;
+	padding-bottom: 18px;
+	display: flex;
+	align-items: center;
+} */
+.footer__logo {
+	display: flex;
+	align-items: center;
+	font-family: 'Play', sans-serif;
+	font-size: 18px;
+	line-height: 2.3;
+	letter-spacing: .05em;
+	color: #fff;
+	flex-basis: 329px;
+	/* margin-bottom: 18px; */
+}
+.footer__logo svg {
+	margin-right: 12px;
+}
+.header__nav {
+	flex-basis: 745px;
+	padding: 0 20px 0 10px;
+}
+.footer__list {
+	flex-basis: 745px;
+	display: flex;
+	gap: 24px;
+	padding: 0 20px 0 10px;
+}
+.footer__item {
+}
+.footer__item a {
+	line-height: 1.37;
+	color: #fff;
+}
+.footer__contacts {
+	max-width: 325px;
+	display: flex;
+	align-items: center;
+}
+.footer__contacts p {
+	margin-right: 8px;
+	line-height: 1.37;
+	color: #fff;
+	display: inline;
+}
+.footer__contacts a {
+	color: #fff;
+	opacity: 0.5;
+	line-height: 1.37;
+}
+.footer__contacts a::after {
+	content: '';
+	border-top: 1px dashed #fff;
+	opacity: 0.5;
+	display: block;
+}
+.bot-footer__copyright {
+	color: #fff;
+	opacity: 0.5;
+	flex-basis: 874px;
+	margin-top: 18px;
+}
+.bot-footer__mail {
+	color: #fff;
+	opacity: 0.5;
+	margin-right: 32px;
+	margin-top: 18px;
+}
+.bot-footer__address {
+	color: #fff;
+	margin-top: 18px;
+}
 
 
 
@@ -407,6 +650,33 @@ body {
 
 
 /* --------------Media request-------------- */
+@media (max-width: 1428px) {
+	.footer__list {
+		display: none;
+	}
+	.footer__logo {
+		order: 1;
+		flex: 1 1 33.33333%;
+	}
+	.footer__contacts {
+		order: 3;
+		flex: 1 1 33.33333%;
+	}
+	.bot-footer__copyright {
+		order: 4;
+		flex-basis: 50%;
+	}
+	.bot-footer__mail {
+		order: 2;
+		flex: 1 1 33.33333%;
+		margin-top: 0;
+		margin-right: 0;
+	}
+	.bot-footer__address {
+		order: 5;
+		flex-basis: 50%;
+	}
+}
 @media (max-width: 1287px) {
 	.nav__item a {
 	font-size: 14px;
@@ -417,15 +687,38 @@ body {
 	font-size: 14px;
 	}
 }
+@media (max-width: 1217px) {
+	.contacts__container {
+		flex-direction: column-reverse;
+		align-items: flex-start;
+	}
+	.contacts__maps-container {
+		width: 100%;
+	}
+	.contacts__maps {
+		width: 100%;
+	}
+	.contacts__content {
+	}
+}
 @media (max-width: 1168px) {
 	.header__button {
 		display: none;
 	}
+	.info__img {
+		max-width: 403px;
+	}
 }
-@media (max-width: 1000px) {
+@media (max-width: 1003px) {
 	.products-section__list {
 		flex-wrap: wrap;
 		justify-content: center;
+	}
+	.footer__logo {
+		flex: 1 1 16%;
+	}
+	.bot-footer__mail {
+		flex-basis: 13%;
 	}
 }
 @media (max-width: 961px) {
@@ -468,6 +761,26 @@ body {
 		text-align: center;
 	}
 }
+@media (max-width: 851px) {
+	.info__content {
+		flex-wrap: wrap;
+		height: auto;
+	}
+	.info__img-cont {
+		order: 1;
+		margin-top: 30px;
+	}
+	.info__content-wrapper {
+		order: 2;
+	}
+	.info__img {
+		max-width: 100%;
+		height: 50%
+	}
+	.info__content-wrapper {
+		max-width: 100%;
+	}
+}
 
 
 /* Планшеты */
@@ -476,7 +789,7 @@ body {
 	max-width: 300px;
 	height: 300px;
 	}
-	.subtitle-section__btn span {
+	.subtitle-section-btn span {
 		width: 45px;
 	}
 	.logo {
@@ -523,8 +836,47 @@ body {
 	.industries__item {
 		flex: 0 0 33.333333%;
 	}
+	.news__list {
+		flex-wrap: wrap;
+		gap: 30px;
+		justify-content: center;
+	}
+	.news__item {
+		max-width: 100%;
+	}
 }
-
+@media (max-width: 736px) {
+	.footer__container {
+		justify-content: center;
+		gap: 15px;
+		align-items: center;
+	}
+	.footer__logo {
+		flex: 0 0 auto;
+		margin: 0;
+		text-align: center;
+	}
+	.footer__contacts {
+		flex: 0 0 auto;
+		margin: 0;
+		text-align: center;
+	}
+	.bot-footer__copyright {
+		flex: 0 0 auto;
+		margin: 0;
+		text-align: center;
+	}
+	.bot-footer__mail {
+		flex: 1 0 auto;
+		margin: 0;
+		text-align: center;
+	}
+	.bot-footer__address {
+		flex-basis: auto;
+		text-align: center;
+		margin: 0;
+	}
+}
 
 @media (max-width: 680px) {
 	.header__button {
@@ -573,5 +925,12 @@ body {
 	.industries__item > a > p {
 		font-size: 14px;
 		line-height: 1.35;
+	}
+}
+@media (max-width: 373px) {
+	.footer__contacts {
+		flex-wrap: wrap;
+		flex: 0 1 100%;
+		justify-content: center;
 	}
 }
